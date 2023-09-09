@@ -2,6 +2,7 @@ package com.example.booking.presentation.fragment
 
 import android.net.Uri
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -13,6 +14,9 @@ import com.example.booking.presentation.viewmodel.BookingViewModel
 import com.example.booking.presentation.viewstate.BookingViewState
 import com.example.core.base.BaseFragment
 import com.example.core.di.provider.ApplicationProvider
+import com.redmadrobot.inputmask.MaskedTextChangedListener
+
+private const val PHONE_NUMBER_MASK = "+7 ([000]) [000]-[00]-[00]"
 
 class BookingFragment : BaseFragment<FragmentBookingBinding>(
     FragmentBookingBinding::inflate
@@ -21,24 +25,41 @@ class BookingFragment : BaseFragment<FragmentBookingBinding>(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val numbers = mutableListOf(resources.getStringArray(R.array.tourists)[0])
-        val adapter = TouristAdapter(numbers)
+        setUpListeners()
+        viewModel.viewState.observe(viewLifecycleOwner) { model -> renderModel(model) }
+        viewModel.onScreenOpened()
+    }
+
+    private fun setUpListeners() {
         with(binding) {
             toolbar.setNavigationOnClickListener {
                 findNavController().navigate(Uri.parse("hotelBooking://number"))
             }
+
+            val maskedTextChangedListener = MaskedTextChangedListener(PHONE_NUMBER_MASK, number)
+            number.addTextChangedListener(maskedTextChangedListener)
+
+            val adapter = context?.let { TouristAdapter(it) }
             tourists.adapter = adapter
             addButton.setOnClickListener {
-                numbers.add(getString(R.string.tourist))
-                tourists.adapter = TouristAdapter(numbers)
-                adapter.notifyItemInserted(numbers.size - 1)
+                adapter?.addTourist()
             }
-            button.setOnClickListener {
-                findNavController().navigate(R.id.action_bookingFragment_to_paidFragment)
+
+            payButton.setOnClickListener {
+                val numberText = number.text.toString()
+                val mailText = mail.text.toString()
+                if (numberText.isNotEmpty() && isMailValid(mailText)) {
+                    findNavController().navigate(R.id.action_bookingFragment_to_paidFragment)
+                } else {
+                    number.error = getString(R.string.error)
+                    mail.error = getString(R.string.error)
+                }
             }
         }
-        viewModel.viewState.observe(viewLifecycleOwner) { model -> renderModel(model) }
-        viewModel.onScreenOpened()
+    }
+
+    private fun isMailValid(mail: String): Boolean {
+        return mail.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(mail).matches()
     }
 
     private fun renderModel(model: BookingViewState) {
@@ -73,7 +94,7 @@ class BookingFragment : BaseFragment<FragmentBookingBinding>(
                 model.toPay.toString().substring(0, 3),
                 model.toPay.toString().substring(3, 6)
             )
-            button.text = getString(
+            payButton.text = getString(
                 R.string.pay,
                 model.toPay.toString().substring(0, 3),
                 model.toPay.toString().substring(3, 6)

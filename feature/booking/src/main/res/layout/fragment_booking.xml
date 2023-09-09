@@ -284,13 +284,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
+                        android:digits="1234567890+"
                         android:hint="@string/phone_number">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/number"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textVisiblePassword" />
+                            android:inputType="number" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -320,7 +321,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/tourists"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
@@ -462,7 +463,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/pay_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"

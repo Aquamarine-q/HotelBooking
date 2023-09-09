@@ -1,5 +1,6 @@
 package com.example.booking.presentation.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,9 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.booking.R
 import com.example.booking.databinding.TouristItemBinding
 
-class TouristAdapter(private var dataset: List<String>) :
+class TouristAdapter(private val context: Context) :
     RecyclerView.Adapter<TouristAdapter.ItemViewHolder>() {
 
+    private val numbers = context.resources.getStringArray(R.array.tourists)
+    private var dataset = mutableListOf(numbers[0])
     private var mExpandedPosition = -1
 
     inner class ItemViewHolder(binding: TouristItemBinding) :
@@ -31,7 +34,7 @@ class TouristAdapter(private var dataset: List<String>) :
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
         with(holder) {
-            title.text = String.format(title.resources.getString(R.string.tourist), item)
+            title.text = context.getString(R.string.tourist, item)
             val isExpanded = position == mExpandedPosition
             with(holder) {
                 layout.visibility = if (isExpanded) View.VISIBLE else View.GONE
@@ -46,5 +49,10 @@ class TouristAdapter(private var dataset: List<String>) :
                 }
             }
         }
+    }
+
+    fun addTourist() {
+        dataset.add(numbers[itemCount])
+        notifyItemInserted(itemCount)
     }
 }
