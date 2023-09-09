@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputEditTextStyle" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="boxBackgroundColor">@null</item>
+        <item name="boxStrokeColor">@null</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="hintTextColor">@null</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="minHeight">48dp</item>
+    </style>
+</resources>

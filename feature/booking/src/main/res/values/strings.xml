@@ -1,0 +1,51 @@
+<resources>
+    <string name="booking">Booking</string>
+    <string name="star">Star</string>
+    <string name="departure">Departure</string>
+    <string name="country">Country, city</string>
+    <string name="date">Date</string>
+    <string name="night_count">Number of nights</string>
+    <string name="hotel">Hotel</string>
+    <string name="number">Number</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="buyer_information">Buyer information</string>
+    <string name="phone_number">Phone number</string>
+    <string name="mail">Mail</string>
+    <string name="check">This data is not shared with anyone. After payment, we will send a check to the number and mail you specified</string>
+    <string name="first_name">First name</string>
+    <string name="second_name">Second name</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="citizenship">Citizenship</string>
+    <string name="passport_number">Passport number</string>
+    <string name="validity_period_of_passport">Validity period of the passport</string>
+    <string name="first_tourist">First tourist</string>
+    <string name="to_pay">To pay</string>
+    <string name="service_charge">Service Charge</string>
+    <string name="fuel_surcharge">Fuel Surcharge</string>
+    <string name="tour">Tour</string>
+    <string name="add_tourist">Add tourist</string>
+    <string name="plus">Plus</string>
+    <string name="blank" translatable="false">%s %s</string>
+    <string name="dash" translatable="false">%s - %s</string>
+    <string name="nights">%s nights</string>
+    <string name="ruble" translatable="false">%s %s ₽</string>
+    <string name="pay">Pay %s %s ₽</string>
+    <string-array name="tourists">
+        <item>First </item>
+        <item>Second </item>
+        <item>Third </item>
+        <item>Fourth </item>
+        <item>Fifth </item>
+        <item>Sixth </item>
+        <item>Seventh </item>
+        <item>Eighth </item>
+        <item>Ninth </item>
+        <item>Tenth </item>
+    </string-array>
+    <string name="tourist">%s tourist</string>
+    <string name="arrow">Arrow</string>
+    <string name="firecracker">Firecracker</string>
+    <string name="order_processed">Your order has been processed</string>
+    <string name="_super">Super!</string>
+    <string name="order_confirmed">Order confirmation №%s may take some time (from 1 hour to 24 hours). As soon as we receive a response from the tour operator, you will receive a notification by email.</string>
+</resources>

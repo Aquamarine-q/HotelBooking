@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="booking">Бронирование</string>
+    <string name="star">Звезда</string>
+    <string name="departure">Вылет из</string>
+    <string name="country">Страна, город</string>
+    <string name="date">Даты</string>
+    <string name="night_count">Кол-во ночей</string>
+    <string name="hotel">Отель</string>
+    <string name="number">Номер</string>
+    <string name="nutrition">Питание</string>
+    <string name="buyer_information">Информация о покупателе</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="mail">Почта</string>
+    <string name="check">Эти данные никому не передаются. После оплаты мы вышлем чек на указанный вами номер и почту</string>
+    <string name="first_name">Имя</string>
+    <string name="second_name">Фамилия</string>
+    <string name="date_of_birth">Дата рождения</string>
+    <string name="citizenship">Гражданство</string>
+    <string name="passport_number">Номер загранпаспорта</string>
+    <string name="validity_period_of_passport">Срок действия загранпаспорта</string>
+    <string name="first_tourist">Первый турист</string>
+    <string name="to_pay">К оплате</string>
+    <string name="service_charge">Сервисный сбор</string>
+    <string name="fuel_surcharge">Топливный сбор</string>
+    <string name="tour">Тур</string>
+    <string name="add_tourist">Добавить туриста</string>
+    <string name="plus">Плюс</string>
+    <string name="nights">%s ночей</string>
+    <string name="pay">Оплатить %s %s ₽</string>
+    <string-array name="tourists">
+        <item>Первый </item>
+        <item>Второй </item>
+        <item>Третий </item>
+        <item>Четвертый </item>
+        <item>Пятый </item>
+        <item>Шестой </item>
+        <item>Седьмой </item>
+        <item>Восьмой </item>
+        <item>Девятый </item>
+        <item>Десятый </item>
+    </string-array>
+    <string name="tourist">%s турист</string>
+    <string name="arrow">Стрелка</string>
+    <string name="firecracker">Хлопушка</string>
+    <string name="order_processed">Ваш заказ принят в работу</string>
+    <string name="_super">Супер!</string>
+    <string name="order_confirmed">Подтверждение заказа №%s может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.</string>
+</resources>

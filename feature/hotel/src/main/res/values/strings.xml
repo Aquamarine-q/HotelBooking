@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hotel">Hotel</string>
+    <string name="perfect">5 Perfect</string>
+    <string name="hotel_photos">Hotel photos</string>
+    <string name="steigenberger_makadi" translatable="false">Steigenberger Makadi</string>
+    <string name="madinat_makadi_safaga_road_makadi_bay" translatable="false">Madinat Makadi, Safaga Road, Makadi Bay, Египет</string>
+    <string name="_134_673">from 134 673 ₽</string>
+    <string name="for_tour_with_flight">for a tour with a flight</string>
+    <string name="about_hotel">About hotel</string>
+    <string name="line">3rd line</string>
+    <string name="paid_Wi_Fi_in_the_lobby">Paid Wi-Fi in the lobby</string>
+    <string name="_30_km_to_airport">30 km to the airport</string>
+    <string name="_1_km_to_beach">1 km to the beach</string>
+    <string name="hotel_description">VIP-class hotel with its own golf courses. High level of service. Recommended for a respectable stay. The hotel accepts guests from 18 years old!</string>
+    <string name="smiling_emoticon">Smiling emoticon</string>
+    <string name="facilities">Facilities</string>
+    <string name="essentials">Essentials</string>
+    <string name="arrow_forward">Arrow forward</string>
+    <string name="check_mark">Check mark</string>
+    <string name="what_s_included">What\'s included</string>
+    <string name="close_mark">Close mark</string>
+    <string name="to_room_selection">To room selection</string>
+    <string name="what_not_included">What is not included</string>
+    <string name="space" translatable="false">%s %s</string>
+    <string name="price">from %s %s ₽</string>
+    <string name="star">Star</string>
+</resources>

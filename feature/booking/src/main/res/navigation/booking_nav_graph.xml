@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/booking_nav_graph"
+    app:startDestination="@id/bookingFragment">
+
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.booking.presentation.fragment.BookingFragment"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking">
+        <deepLink app:uri="hotelBooking://booking" />
+        <action
+            android:id="@+id/action_bookingFragment_to_paidFragment"
+            app:destination="@id/paidFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paidFragment"
+        android:name="com.example.booking.presentation.fragment.PaidFragment"
+        android:label="fragment_paid"
+        tools:layout="@layout/fragment_paid">
+        <action
+            android:id="@+id/action_paidFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment"
+            app:popUpTo="@id/bookingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conditioner">Conditioner</string>
+    <string name="pool">Pool</string>
+    <string name="more_about_room">More about the room</string>
+    <string name="choose_number">Choose number</string>
+    <string name="price" translatable="false">%s %s ₽</string>
+    <string name="arrow">Arrow</string>
+</resources>
